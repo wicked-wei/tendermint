@@ -90,6 +90,7 @@ func (vals *ValidatorSet) IncrementProposerPriority(times int) {
 		// div = Floor((maxPriority - minPriority) / 2*totalVotingPower)
 		// threshold > 0 and diff > threshold guarantees (diff / threshold > 0):
 		div := diff / threshold
+		fmt.Println("diff", diff, "threshold", threshold, "div", div)
 		vals.dividePrioritiesBy(div)
 	}
 
